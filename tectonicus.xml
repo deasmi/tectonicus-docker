@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tectonicus</Name>
+  <Repository>deasmi/tectonicus-docker</Repository>
+  <Registry>https://hub.docker.com/r/deasmi/tectonicus-docker/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Privileged>false</Privileged>
+  <Support>https://forums.lime-technology.com/topic/58535-puppetmaster-docker-container/</Support>
+  <Project>http://www.puppet.com/</Project>
+  <Overview>
+    Runs tectonicus and exits from /world to /output
+  </Overview>
+  <Category>Tools: Games</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/deasmi/tectonicus-docker/master/tectonicus.xml</TemplateURL>
+  <ExtraParams/>
+  <DateInstalled>1499079848</DateInstalled>
+  <Description>
+    Blah blah
+</Description>
+  <Data>
+  <Volume>
+      <HostDir>worlddir</HostDir>
+      <ContainerDir>/world</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>outputdir</HostDir>
+      <ContainerDir>/output</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+
+  <Config Name="worlddir" Target="/world" Default="" Mode="ro" Description="Container Path: /world" Type="Path" Display="always" Required="false" Mask="false">/pathtoworld</Config>
+  <Config Name="outputdir" Target="/output" Default="" Mode="rw" Description="Container Path: /output" Type="Path" Display="always" Required="false" Mask="false">/pathtocreatedfiles</Config>
+</Container>
