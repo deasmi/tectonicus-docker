@@ -12,7 +12,7 @@ ADD run.sh	     ${path}/run.sh
 VOLUME ["/world"]
 VOLUME ["/map"]
 
-ENTRYPOINT ${path}/run.sh
+ENTRYPOINT /bin/sh ${path}/run.sh
 
 
 
